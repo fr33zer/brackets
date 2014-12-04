@@ -63,7 +63,7 @@ define({
     "ERROR_SAVING_FILE"                 : "An error occurred when trying to save the file <span class='dialog-filename'>{0}</span>. {1}",
     "ERROR_RENAMING_FILE_TITLE"         : "ගොනුව නැවත නම් කිරිමේ දෝශයක්",
     "ERROR_RENAMING_FILE"               : "An error occurred when trying to rename the file <span class='dialog-filename'>{0}</span>. {1}",
-    "ERROR_DELETING_FILE_TITLE"         : "Error Deleting File",
+    "ERROR_DELETING_FILE_TITLE"         : "ගොනු මැකීමේ දෝෂයක්",
     "ERROR_DELETING_FILE"               : "An error occurred when trying to delete the file <span class='dialog-filename'>{0}</span>. {1}",
     "INVALID_FILENAME_TITLE"            : "Invalid {0}",
     "INVALID_FILENAME_MESSAGE"          : "{0} cannot use any system reserved words, end with dots (.) or use any of the following characters: <code class='emphasized'>{1}</code>",
@@ -85,7 +85,7 @@ define({
 
     // Live Preview error strings
     "ERROR_LAUNCHING_BROWSER_TITLE"     : "Error Launching Browser",
-    "ERROR_CANT_FIND_CHROME"            : "The Google Chrome browser could not be found. Please make sure it is installed.",
+    "ERROR_CANT_FIND_CHROME"            : "Google Chrome සොයාගත නොහැක. එය ස්ථාපනය කර ඇති බව තහවුරු කරගන්න.",
     "ERROR_LAUNCHING_BROWSER"           : "An error occurred when launching the browser. (error {0})",
     
     "LIVE_DEVELOPMENT_ERROR_TITLE"      : "සජීව පුර්වදර්ශනයෙහි ගැටළුවක් ",
@@ -102,7 +102,7 @@ define({
     "LIVE_DEV_STATUS_TIP_NOT_CONNECTED" : "සජීව පුර්වදර්ශනය",
     "LIVE_DEV_STATUS_TIP_PROGRESS1"     : "සජීව පුර්වදර්ශනය: Connecting\u2026",
     "LIVE_DEV_STATUS_TIP_PROGRESS2"     : "සජීව පුර්වදර්ශනය: Initializing\u2026",
-    "LIVE_DEV_STATUS_TIP_CONNECTED"     : "Disconnect Live Preview",
+    "LIVE_DEV_STATUS_TIP_CONNECTED"     : "සජීව පුර්වදර්ශනයෙන් ඉවත් වන්න",
     "LIVE_DEV_STATUS_TIP_OUT_OF_SYNC"   : "Live Preview (save file to refresh)",
     "LIVE_DEV_STATUS_TIP_SYNC_ERROR"    : "Live Preview (not updating due to syntax error)",
 
@@ -112,11 +112,11 @@ define({
     "LIVE_DEV_CLOSED_UNKNOWN_REASON"           : "Live Preview was cancelled for an unknown reason ({0})",
     
     "SAVE_CLOSE_TITLE"                  : "වෙනස්කම් සුරකින්න",
-    "SAVE_CLOSE_MESSAGE"                : "Do you want to save the changes you made in the document <span class='dialog-filename'>{0}</span>?",
+    "SAVE_CLOSE_MESSAGE"                : "පහතින් දක්වා ඇති වෙනස් කම් සුරැකීමට අවශ්‍යද? <span class='dialog-filename'>{0}</span>?",
     "SAVE_CLOSE_MULTI_MESSAGE"          : "පහත ගොනු වල වෙනස්කම් සුරකින්න අවශ්‍යද?",
     "EXT_MODIFIED_TITLE"                : "බාහිර වෙනස්කම්",
-    "CONFIRM_FOLDER_DELETE_TITLE"       : "Confirm Delete",
-    "CONFIRM_FOLDER_DELETE"             : "Are you sure you want to delete the folder <span class='dialog-filename'>{0}</span>?",
+    "CONFIRM_FOLDER_DELETE_TITLE"       : "මකා දැමීම තහවුරු කරන්න",
+    "CONFIRM_FOLDER_DELETE"             : "ගොනුව මකා දැමීම තහවුරු කරන්න <span class='dialog-filename'>{0}</span>?",
     "FILE_DELETED_TITLE"                : "ගොනුව මකාදමන ලදී",
     "EXT_MODIFIED_WARNING"              : "<span class='dialog-filename'>{0}</span> has been modified on disk.<br /><br />Do you want to save the file and overwrite those changes?",
     "EXT_MODIFIED_MESSAGE"              : "<span class='dialog-filename'>{0}</span> has been modified on disk, but also has unsaved changes in {APP_NAME}.<br /><br />Which version do you want to keep?",
@@ -142,7 +142,7 @@ define({
     "REPLACE_PLACEHOLDER"               : "මේ සමග ප්‍රතිස්ථාපනය කරන්නh\u2026",
     "BUTTON_REPLACE_ALL"                : "කාණ්ඩය\u2026",
     "BUTTON_REPLACE_ALL_IN_FILES"       : "ප්‍රතිස්ථාපනය \u2026",
-    "BUTTON_REPLACE"                    : "prathisthapanaya",
+    "BUTTON_REPLACE"                    : "ප්‍රතිස්ථාපනය",
     "BUTTON_NEXT"                       : "\u25B6",
     "BUTTON_PREV"                       : "\u25C0",
     "BUTTON_NEXT_HINT"                  : "Next Match",
@@ -158,7 +158,7 @@ define({
     "CHOOSE_FOLDER"                     : "ෆොල්ඩරයක් තොරන්න",
 
     "RELEASE_NOTES"                     : "Release Notes",
-    "NO_UPDATE_TITLE"                   : "You're Up to Date!",
+    "NO_UPDATE_TITLE"                   : "ඔබ යවත්කාලිනයි!",
     "NO_UPDATE_MESSAGE"                 : "You are running the latest version of {APP_NAME}.",
 
     // Find and Replace
@@ -174,7 +174,7 @@ define({
     "FIND_IN_FILES_ZERO_FILES"          : "Filter excludes all files {0}",
     "FIND_IN_FILES_FILE"                : "ගොනුව",
     "FIND_IN_FILES_FILES"               : "ගොනු",
-    "FIND_IN_FILES_MATCH"               : "match",
+    "FIND_IN_FILES_MATCH"               : "ගැලපීම",
     "FIND_IN_FILES_MATCHES"             : "ගැලපීම්",
     "FIND_IN_FILES_MORE_THAN"           : "වඩා ",
     "FIND_IN_FILES_PAGING"              : "{0}&mdash;{1}",
@@ -183,12 +183,12 @@ define({
     "REPLACE_IN_FILES_ERRORS_TITLE"     : "Replace Errors",
     "REPLACE_IN_FILES_ERRORS"           : "The following files weren't modified because they changed after the search or couldn't be written.",
     
-    "ERROR_FETCHING_UPDATE_INFO_TITLE"  : "Error getting update info",
+    "ERROR_FETCHING_UPDATE_INFO_TITLE"  : "නව වෙනස්කම් ලබාගැනීමේ දෝෂයක්",
     "ERROR_FETCHING_UPDATE_INFO_MSG"    : "There was a problem getting the latest update information from the server. Please make sure you are connected to the internet and try again.",
     
     // File exclusion filters
     "NEW_FILE_FILTER"                   : "New Exclusion Set\u2026",
-    "CLEAR_FILE_FILTER"                 : "Don't Exclude Files",
+    "CLEAR_FILE_FILTER"                 : "ගොනු ඇතුලත් කරන්න එපා",
     "NO_FILE_FILTER"                    : "No Files Excluded",
     "EXCLUDE_FILE_FILTER"               : "අත්හරින්න {0}",
     "EDIT_FILE_FILTER"                  : "වෙනස් කරන්න\u2026",
@@ -217,7 +217,7 @@ define({
      */
     "PROJECT_LOADING"   : "Loading\u2026",
     "UNTITLED"          : "නම් නොකරන ලද",
-    "WORKING_FILES"     : "Working Files",
+    "WORKING_FILES"    : "වැඩ කරන ගොනු"
 
     /**
      * Keyboard modifier names
@@ -239,7 +239,7 @@ define({
     "STATUSBAR_INDENT_TOOLTIP_TABS"         : "Click to switch indentation to tabs",
     "STATUSBAR_INDENT_SIZE_TOOLTIP_SPACES"  : "Click to change number of spaces used when indenting",
     "STATUSBAR_INDENT_SIZE_TOOLTIP_TABS"    : "Click to change tab character width",
-    "STATUSBAR_SPACES"                      : "Spaces:",
+    "STATUSBAR_SPACES"                      : "හිස් තැන්:",
     "STATUSBAR_TAB_SIZE"                    : "Tab Size:",
     "STATUSBAR_LINE_COUNT_SINGULAR"         : "\u2014 {0} Line",
     "STATUSBAR_LINE_COUNT_PLURAL"           : "\u2014 {0} Lines",
@@ -267,7 +267,7 @@ define({
     // File menu commands
     "FILE_MENU"                           : "ගොනුව",
     "CMD_FILE_NEW_UNTITLED"               : "නව",
-    "CMD_FILE_NEW"                        : "New File",
+    "CMD_FILE_NEW"                        : "නව ගොනුව",
     "CMD_FILE_NEW_FOLDER"                 : "New Folder",
     "CMD_FILE_OPEN"                       : "Open\u2026",
     "CMD_ADD_TO_WORKING_SET"              : "Add To Working Set",
