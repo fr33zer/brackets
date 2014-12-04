@@ -72,7 +72,7 @@ define({
     "ERROR_CREATING_FILE"               : "An error occurred when trying to create the {0} <span class='dialog-filename'>{1}</span>. {2}",
 
     // Application preferences corrupt error strings
-    "ERROR_PREFS_CORRUPT_TITLE"         : "Error Reading Preferences",
+    "ERROR_PREFS_CORRUPT_TITLE"         : "අභිමතයන් කියවීමේ ගැටළුවක්",
     "ERROR_PREFS_CORRUPT"               : "Your preferences file is not valid JSON. The file will be opened so that you can correct the format. You will need to restart {APP_NAME} for the changes to take effect.",
 
     // Application error strings
@@ -88,10 +88,10 @@ define({
     "ERROR_CANT_FIND_CHROME"            : "The Google Chrome browser could not be found. Please make sure it is installed.",
     "ERROR_LAUNCHING_BROWSER"           : "An error occurred when launching the browser. (error {0})",
     
-    "LIVE_DEVELOPMENT_ERROR_TITLE"      : "Live Preview Error",
+    "LIVE_DEVELOPMENT_ERROR_TITLE"      : "සජීව පුර්වදර්ශනයෙහි ගැටළුවක් ",
     "LIVE_DEVELOPMENT_RELAUNCH_TITLE"   : "Connecting to Browser",
     "LIVE_DEVELOPMENT_ERROR_MESSAGE"    : "In order for Live Preview to connect, Chrome needs to be relaunched with remote debugging enabled.<br /><br />Would you like to relaunch Chrome and enable remote debugging?",
-    "LIVE_DEV_LOADING_ERROR_MESSAGE"    : "Unable to load Live Preview page",
+    "LIVE_DEV_LOADING_ERROR_MESSAGE"    : "සජීව පුර්වදර්ශනය ප්‍රවේශනය කල නොහැක",
     "LIVE_DEV_NEED_HTML_MESSAGE"        : "Open an HTML file or make sure there is an index.html file in your project in order to launch live preview.",
     "LIVE_DEV_NEED_BASEURL_MESSAGE"     : "To launch live preview with a server-side file, you need to specify a Base URL for this project.",
     "LIVE_DEV_SERVER_NOT_READY_MESSAGE" : "Error starting up the HTTP server for live preview files. Please try again.",
@@ -99,9 +99,9 @@ define({
     "LIVE_DEVELOPMENT_INFO_MESSAGE"     : "Live Preview connects {APP_NAME} to your browser. It launches a preview of your HTML file in the browser, then updates the preview instantly as you edit your code.<br /><br />In this early version of {APP_NAME}, Live Preview only works with <strong>Google Chrome</strong> and updates live as you edit <strong>CSS or HTML files</strong>. Changes to JavaScript files are automatically reloaded when you save.<br /><br />(You'll only see this message once.)",
     "LIVE_DEVELOPMENT_TROUBLESHOOTING"  : "For more information, see <a href='{0}' title='{0}'>Troubleshooting Live Preview connection errors</a>.",
     
-    "LIVE_DEV_STATUS_TIP_NOT_CONNECTED" : "Live Preview",
-    "LIVE_DEV_STATUS_TIP_PROGRESS1"     : "Live Preview: Connecting\u2026",
-    "LIVE_DEV_STATUS_TIP_PROGRESS2"     : "Live Preview: Initializing\u2026",
+    "LIVE_DEV_STATUS_TIP_NOT_CONNECTED" : "සජීව පුර්වදර්ශනය",
+    "LIVE_DEV_STATUS_TIP_PROGRESS1"     : "සජීව පුර්වදර්ශනය: Connecting\u2026",
+    "LIVE_DEV_STATUS_TIP_PROGRESS2"     : "සජීව පුර්වදර්ශනය: Initializing\u2026",
     "LIVE_DEV_STATUS_TIP_CONNECTED"     : "Disconnect Live Preview",
     "LIVE_DEV_STATUS_TIP_OUT_OF_SYNC"   : "Live Preview (save file to refresh)",
     "LIVE_DEV_STATUS_TIP_SYNC_ERROR"    : "Live Preview (not updating due to syntax error)",
@@ -111,13 +111,13 @@ define({
     "LIVE_DEV_NAVIGATED_AWAY"                  : "Live Preview was cancelled because the browser navigated to a page that is not part of the current project",
     "LIVE_DEV_CLOSED_UNKNOWN_REASON"           : "Live Preview was cancelled for an unknown reason ({0})",
     
-    "SAVE_CLOSE_TITLE"                  : "Save Changes",
+    "SAVE_CLOSE_TITLE"                  : "වෙනස්කම් සුරකින්න",
     "SAVE_CLOSE_MESSAGE"                : "Do you want to save the changes you made in the document <span class='dialog-filename'>{0}</span>?",
-    "SAVE_CLOSE_MULTI_MESSAGE"          : "Do you want to save your changes to the following files?",
-    "EXT_MODIFIED_TITLE"                : "External Changes",
+    "SAVE_CLOSE_MULTI_MESSAGE"          : "පහත ගොනු වල වෙනස්කම් සුරකින්න අවශ්‍යද?",
+    "EXT_MODIFIED_TITLE"                : "බාහිර වෙනස්කම්",
     "CONFIRM_FOLDER_DELETE_TITLE"       : "Confirm Delete",
     "CONFIRM_FOLDER_DELETE"             : "Are you sure you want to delete the folder <span class='dialog-filename'>{0}</span>?",
-    "FILE_DELETED_TITLE"                : "File Deleted",
+    "FILE_DELETED_TITLE"                : "ගොනුව මකාදමන ලදී",
     "EXT_MODIFIED_WARNING"              : "<span class='dialog-filename'>{0}</span> has been modified on disk.<br /><br />Do you want to save the file and overwrite those changes?",
     "EXT_MODIFIED_MESSAGE"              : "<span class='dialog-filename'>{0}</span> has been modified on disk, but also has unsaved changes in {APP_NAME}.<br /><br />Which version do you want to keep?",
     "EXT_DELETED_MESSAGE"               : "<span class='dialog-filename'>{0}</span> has been deleted on disk, but has unsaved changes in {APP_NAME}.<br /><br />Do you want to keep your changes?",
@@ -126,18 +126,18 @@ define({
     "DONE"                              : "Done",
     "OK"                                : "OK",
     "CANCEL"                            : "Cancel",
-    "DONT_SAVE"                         : "Don't Save",
+    "DONT_SAVE"                         : "සුරකින්න එපා",
     "SAVE"                              : "සුරකින්න",
     "SAVE_AS"                           : "Save As\u2026",
     "SAVE_AND_OVERWRITE"                : "Overwrite",
     "DELETE"                            : "මකන්න",
-    "BUTTON_YES"                        : "Yes",
-    "BUTTON_NO"                         : "No",
+    "BUTTON_YES"                        : "ඔව්",
+    "BUTTON_NO"                         : "නැත",
     
     // Find, Replace, Find in Files
-    "FIND_RESULT_COUNT"                 : "{0} results",
-    "FIND_RESULT_COUNT_SINGLE"          : "1 result",
-    "FIND_NO_RESULTS"                   : "No results",
+    "FIND_RESULT_COUNT"                 : "{0} ප්‍රථිපල",
+    "FIND_RESULT_COUNT_SINGLE"          : "1 ප්‍රථිපල",
+    "FIND_NO_RESULTS"                   : "ප්‍රථිපල නොමැත ",
     "FIND_QUERY_PLACEHOLDER"            : "Find\u2026",
     "REPLACE_PLACEHOLDER"               : "Replace with\u2026",
     "BUTTON_REPLACE_ALL"                : "Batch\u2026",
@@ -164,7 +164,7 @@ define({
     // Find and Replace
     "FIND_REPLACE_TITLE_LABEL"          : "Replace",
     "FIND_REPLACE_TITLE_WITH"           : "with",
-    "FIND_TITLE_LABEL"                  : "Found",
+    "FIND_TITLE_LABEL"                  : "හමුවූවා",
     "FIND_TITLE_SUMMARY"                : " &mdash; {0} {1} {2} in {3}",
 
     // Find in Files
@@ -172,8 +172,8 @@ define({
     "FIND_IN_FILES_SCOPED"              : "in <span class='dialog-filename'>{0}</span>",
     "FIND_IN_FILES_NO_SCOPE"            : "in project",
     "FIND_IN_FILES_ZERO_FILES"          : "Filter excludes all files {0}",
-    "FIND_IN_FILES_FILE"                : "file",
-    "FIND_IN_FILES_FILES"               : "files",
+    "FIND_IN_FILES_FILE"                : "ගොනුව",
+    "FIND_IN_FILES_FILES"               : "ගොනු",
     "FIND_IN_FILES_MATCH"               : "match",
     "FIND_IN_FILES_MATCHES"             : "matches",
     "FIND_IN_FILES_MORE_THAN"           : "Over ",
@@ -216,7 +216,7 @@ define({
      * ProjectManager
      */
     "PROJECT_LOADING"   : "Loading\u2026",
-    "UNTITLED"          : "Untitled",
+    "UNTITLED"          : "නම් නොකරන ලද",
     "WORKING_FILES"     : "Working Files",
 
     /**
