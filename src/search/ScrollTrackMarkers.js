@@ -22,7 +22,7 @@
  */
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, regexp: true, indent: 4, maxerr: 50 */
-/*global define, $, brackets, window */
+/*global define, $, brackets */
 
 
 /**
@@ -35,9 +35,7 @@ define(function (require, exports, module) {
     
     var _ = require("thirdparty/lodash");
     
-    var Editor              = require("editor/Editor"),
-        EditorManager       = require("editor/EditorManager"),
-        PanelManager        = require("view/PanelManager");
+    var WorkspaceManager = require("view/WorkspaceManager");
     
     
     /**
@@ -63,6 +61,12 @@ define(function (require, exports, module) {
      * @type {!Array.<{line: number, ch: number}>}
      */
     var marks = [];
+    
+    /**
+     * Tickmark markCurrent() last called on, or null if never called / called with -1.
+     * @type {?jQueryObject}
+     */
+    var $markedTickmark;
     
     
     function _getScrollbar(editor) {
@@ -116,6 +120,7 @@ define(function (require, exports, module) {
         if (editor) {
             $(".tickmark-track", editor.getRootElement()).empty();
             marks = [];
+            $markedTickmark = null;
         }
     }
     
@@ -142,7 +147,7 @@ define(function (require, exports, module) {
             _calcScaling();
             
             // Update tickmarks during editor resize (whenever resizing has paused/stopped for > 1/3 sec)
-            $(PanelManager).on("editorAreaResize.ScrollTrackMarkers", _.debounce(function () {
+            WorkspaceManager.on("workspaceUpdateLayout.ScrollTrackMarkers", _.debounce(function () {
                 if (marks.length) {
                     _calcScaling();
                     $(".tickmark-track", editor.getRootElement()).empty();
@@ -155,7 +160,7 @@ define(function (require, exports, module) {
             $(".tickmark-track", curEditor.getRootElement()).remove();
             editor = null;
             marks = [];
-            $(PanelManager).off("editorAreaResize.ScrollTrackMarkers");
+            WorkspaceManager.off("workspaceUpdateLayout.ScrollTrackMarkers");
         }
     }
     
@@ -170,6 +175,18 @@ define(function (require, exports, module) {
         marks = marks.concat(posArray);
         _renderMarks(posArray);
     }
+    
+    /** @param {number} index Either -1, or an index into the array passed to addTickmarks() */
+    function markCurrent(index) {
+        // Remove previous highlight first
+        if ($markedTickmark) {
+            $markedTickmark.removeClass("tickmark-current");
+            $markedTickmark = null;
+        }
+        if (index !== -1) {
+            $markedTickmark = $(".tickmark-track > .tickmark", editor.getRootElement()).eq(index).addClass("tickmark-current");
+        }
+    }
 
     // Private helper for unit tests
     function _getTickmarks() {
@@ -183,4 +200,5 @@ define(function (require, exports, module) {
     exports.clear           = clear;
     exports.setVisible      = setVisible;
     exports.addTickmarks    = addTickmarks;
+    exports.markCurrent     = markCurrent;
 });

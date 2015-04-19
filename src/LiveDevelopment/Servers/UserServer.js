@@ -22,13 +22,13 @@
  */
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, forin: true, maxerr: 50, regexp: true */
-/*global define, $, brackets, window */
+/*global define */
 
 define(function (require, exports, module) {
     "use strict";
     
-    var BaseServer  = require("LiveDevelopment/Servers/BaseServer").BaseServer,
-        FileUtils   = require("file/FileUtils");
+    var BaseServer             = require("LiveDevelopment/Servers/BaseServer").BaseServer,
+        LiveDevelopmentUtils   = require("LiveDevelopment/LiveDevelopmentUtils");
 
     /**
      * Live preview server for user specified server as defined with Live Preview Base Url
@@ -68,8 +68,8 @@ define(function (require, exports, module) {
             return false;
         }
 
-        return FileUtils.isStaticHtmlFileExt(localPath) ||
-            FileUtils.isServerHtmlFileExt(localPath);
+        return LiveDevelopmentUtils.isStaticHtmlFileExt(localPath) ||
+            LiveDevelopmentUtils.isServerHtmlFileExt(localPath);
     };
 
     exports.UserServer = UserServer;

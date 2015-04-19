@@ -22,7 +22,7 @@
  */
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
-/*global $, define, describe, it, xit, expect, beforeEach, afterEach, waitsFor, waitsForDone, runs, window */
+/*global define, describe, it, expect, beforeEach, afterEach, waitsFor, waitsForDone, runs */
 /*unittests: QuickOpen*/
 
 define(function (require, exports, module) {
@@ -72,9 +72,6 @@ define(function (require, exports, module) {
         function expectSearchBarOpen() {
             expect(getSearchBar()[0]).toBeDefined();
         }
-        function expectSearchBarClosed() {
-            expect(getSearchBar()[0]).not.toBeDefined();
-        }
         
         function enterSearchText(str, timeoutLength) {
             timeoutLength = timeoutLength || 10;
@@ -83,6 +80,7 @@ define(function (require, exports, module) {
             
             testWindow.setTimeout(function () {
                 getSearchField().val(str);
+                getSearchField().trigger("input");
             }, timeoutLength);
         }
         
@@ -91,7 +89,7 @@ define(function (require, exports, module) {
             
             // Using keyup here because of inside knowledge of how the events are processed
             // on the QuickOpen input.
-            SpecRunnerUtils.simulateKeyEvent(KeyEvent.DOM_VK_RETURN, "keyup", getSearchField()[0]);
+            SpecRunnerUtils.simulateKeyEvent(KeyEvent.DOM_VK_RETURN, "keydown", getSearchField()[0]);
         }
         
         /**
@@ -105,8 +103,7 @@ define(function (require, exports, module) {
          */
         function getQuickOpenTest(quickOpenQuery, gotoLineQuery, file, line, col) {
             return function () {
-                var err = false,
-                    editor,
+                var editor,
                     $scroller;
                 
                 SpecRunnerUtils.loadProjectInTestWindow(testPath);
@@ -182,8 +179,8 @@ define(function (require, exports, module) {
                     var editorHeight = $scroller.height();
                     var cursorPos = editor._codeMirror.cursorCoords(null, "page").bottom;
                     
-                    expect(cursorPos).toBeGreaterThan(editorHeight * 0.4 - offset);
-                    expect(cursorPos).toBeLessThan(editorHeight * 0.6 - offset);
+                    expect(cursorPos).toBeGreaterThan(editorHeight * 0.4 + offset);
+                    expect(cursorPos).toBeLessThan(editorHeight * 0.6 + offset);
                 });
             };
         }

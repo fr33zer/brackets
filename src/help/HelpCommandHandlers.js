@@ -23,7 +23,7 @@
 
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
-/*global define, $, brackets, window, PathUtils, Mustache */
+/*global define, $, brackets, window, Mustache */
 
 define(function (require, exports, module) {
     "use strict";
@@ -34,14 +34,15 @@ define(function (require, exports, module) {
         Commands                = require("command/Commands"),
         Dialogs                 = require("widgets/Dialogs"),
         FileUtils               = require("file/FileUtils"),
-        Global                  = require("utils/Global"),
         NativeApp               = require("utils/NativeApp"),
         Strings                 = require("strings"),
         StringUtils             = require("utils/StringUtils"),
         UpdateNotification      = require("utils/UpdateNotification"),
         AboutDialogTemplate     = require("text!htmlContent/about-dialog.html"),
         ContributorsTemplate    = require("text!htmlContent/contributors-list.html");
-    
+    // make sure the global brackets variable is loaded
+    require("utils/Global");
+
     /**
      * This is the thirdparty API's (GitHub) maximum contributors per page limit
      * @const {number}
