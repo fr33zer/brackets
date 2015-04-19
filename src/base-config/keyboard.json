@@ -1,4 +1,4 @@
-{
+﻿{
     "file.newDoc":  [
         "Ctrl-N"
     ],
@@ -71,7 +71,13 @@
         }
     ],
     "edit.splitSelIntoLines": [
-        "Ctrl-Alt-L"
+        {
+           "key": "Ctrl-Alt-L"
+        },
+        {
+           "key":"Ctrl-Shift-L",
+           "platform": "linux"
+        }
     ],
     "edit.addCursorToPrevLine": [
         {
@@ -157,7 +163,13 @@
         "Ctrl-Shift-F"
     ],
     "cmd.replaceInFiles":  [
-        "Ctrl-Alt-Shift-F"
+        {
+            "key": "Ctrl-Shift-H"
+        },
+        {
+            "key": "Cmd-Opt-Shift-F",
+            "platform": "mac"
+        }
     ],
     "cmd.findNext":  [
         {
@@ -201,27 +213,32 @@
             "key": "Ctrl-H"
         },
         {
-            "key": "Cmd-Alt-F",
+            "key": "Cmd-Opt-F",
             "platform": "mac"
         }
     ],
     "view.hideSidebar":  [
-        "Ctrl-Shift-H"
+        {   
+            "key" : "Ctrl-Alt-H"
+        },
+        {
+            "key": "Cmd-Shift-H",
+            "platform": "mac"
+        }
     ],
     "view.increaseFontSize":  [
         {
             "key": "Ctrl-=",
-            "displayKey": "Cmd-+"
+            "displayKey": "Ctrl-+"
         },
         {
-            "key": "Ctrl-+",
-            "displayKey": "Cmd-+"
+            "key": "Ctrl-+"
         }
     ],
     "view.decreaseFontSize":  [
         {
             "key": "Ctrl--",
-            "displayKey": "Cmd-−"
+            "displayKey": "Ctrl-−"
         }
     ],
     "view.restoreFontSize":  [
@@ -233,8 +250,8 @@
             "displayKey": "Ctrl-\u2191"
         },
         {
-            "key": "Ctrl-Alt-Up",
-            "displayKey": "Ctrl-Alt-\u2191",
+            "key": "Ctrl-Opt-Up",
+            "displayKey": "Ctrl-Opt-\u2191",
             "platform": "mac"
         }
     ],
@@ -244,8 +261,8 @@
             "displayKey": "Ctrl-\u2193"
         },
         {
-            "key": "Ctrl-Alt-Down",
-            "displayKey": "Ctrl-Alt-\u2193",
+            "key": "Ctrl-Opt-Down",
+            "displayKey": "Ctrl-Opt-\u2193",
             "platform": "mac"
         }
     ],
@@ -321,7 +338,7 @@
         }
     ],
     "navigate.newRule":  [
-        "Cmd-Alt-N"
+        "Ctrl-Alt-N"
     ],
     "file.rename":  [
         "F2"
