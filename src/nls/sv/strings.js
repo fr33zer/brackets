@@ -122,7 +122,7 @@ define({
     "LIVE_DEV_STATUS_TIP_SYNC_ERROR"    : "Förhandsvisning (uppdateras inte på grund av syntaxfel)",
 
     "LIVE_DEV_DETACHED_REPLACED_WITH_DEVTOOLS" : "Förhandsvisningen avbröts eftersom webbläsarens utvecklarverktyg öppnades.",
-    "LIVE_DEV_DETACHED_TARGET_CLOSED"          : "Förhandsvisningen avbröst eftersom sidan stängdes i webbläsaren.",
+    "LIVE_DEV_DETACHED_TARGET_CLOSED"          : "Förhandsvisningen avbröts eftersom sidan stängdes i webbläsaren.",
     "LIVE_DEV_NAVIGATED_AWAY"                  : "Förhandsvisningen avbröts eftersom webbläsaren navigerades till en sida som inte är del av det nuvarande projektet.",
     "LIVE_DEV_CLOSED_UNKNOWN_REASON"           : "Förhandsvisningen avbröts på grund av ett okänt fel. ({0})",
     
@@ -352,7 +352,7 @@ define({
     "CMD_LINE_DOWN"                       : "Flytta rad nedåt",
     "CMD_OPEN_LINE_ABOVE"                 : "Öppna rad ovanför",
     "CMD_OPEN_LINE_BELOW"                 : "Öppna rad nedanför",
-    "CMD_TOGGLE_CLOSE_BRACKETS"           : "Stäng paranteser automatiskt",
+    "CMD_TOGGLE_CLOSE_BRACKETS"           : "Stäng parenteser automatiskt",
     "CMD_SHOW_CODE_HINTS"                 : "Visa kodförslag",
     
     // Search menu commands
@@ -364,11 +364,9 @@ define({
     "CMD_ADD_NEXT_MATCH"                  : "Lägg nästa träff till markering",
     "CMD_SKIP_CURRENT_MATCH"              : "Hoppa över och lägg till nästa träff",
     "CMD_FIND_IN_FILES"                   : "Sök i filer",
-    "CMD_FIND_IN_SELECTED"                : "Sök i markerad fil/mapp",
     "CMD_FIND_IN_SUBTREE"                 : "Sök i\u2026",
     "CMD_REPLACE"                         : "Ersätt",
     "CMD_REPLACE_IN_FILES"                : "Ersätt i filer",
-    "CMD_REPLACE_IN_SELECTED"             : "Ersätt i markerad fil/mapp",
     "CMD_REPLACE_IN_SUBTREE"              : "Ersätt i\u2026",
     
     // View menu commands
@@ -628,4 +626,4 @@ define({
     "DOCS_MORE_LINK"                            : "Läs mer"
 });
 
-/* Last translated for 893c065b715c211526dcd010c0294e12a8683995 */
+/* Last translated for fd3ef2bf9041fc067c47d600df1372725f6f5f04 */

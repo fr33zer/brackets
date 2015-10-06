@@ -75,7 +75,8 @@ module.exports = function (grunt) {
                             '!extensibility/node/node_modules/**/{test,tst}/**/*',
                             '!extensibility/node/node_modules/**/examples/**/*',
                             'filesystem/impls/appshell/node/**',
-                            '!filesystem/impls/appshell/node/spec/**'
+                            '!filesystem/impls/appshell/node/spec/**',
+                            'search/node/**'
                         ]
                     },
                     /* extensions and CodeMirror modes */
@@ -93,13 +94,13 @@ module.exports = function (grunt) {
                             '!extensions/default/*/thirdparty/**/*.htm{,l}',
                             'extensions/dev/*',
                             'extensions/samples/**/*',
-                            'thirdparty/CodeMirror2/addon/{,*/}*',
-                            'thirdparty/CodeMirror2/keymap/{,*/}*',
-                            'thirdparty/CodeMirror2/lib/{,*/}*',
-                            'thirdparty/CodeMirror2/mode/{,*/}*',
-                            '!thirdparty/CodeMirror2/mode/**/*.html',
-                            '!thirdparty/CodeMirror2/**/*test.js',
-                            'thirdparty/CodeMirror2/theme/{,*/}*',
+                            'thirdparty/CodeMirror/addon/{,*/}*',
+                            'thirdparty/CodeMirror/keymap/{,*/}*',
+                            'thirdparty/CodeMirror/lib/{,*/}*',
+                            'thirdparty/CodeMirror/mode/{,*/}*',
+                            '!thirdparty/CodeMirror/mode/**/*.html',
+                            '!thirdparty/CodeMirror/**/*test.js',
+                            'thirdparty/CodeMirror/theme/{,*/}*',
                             'thirdparty/i18n/*.js',
                             'thirdparty/text/*.js'
                         ]
@@ -268,14 +269,14 @@ module.exports = function (grunt) {
                 vendor : [
                     'test/polyfills.js', /* For reference to why this polyfill is needed see Issue #7951. The need for this should go away once the version of phantomjs gets upgraded to 2.0 */
                     'src/thirdparty/jquery-2.1.3.min.js',
-                    'src/thirdparty/CodeMirror2/lib/codemirror.js',
-                    'src/thirdparty/CodeMirror2/lib/util/dialog.js',
-                    'src/thirdparty/CodeMirror2/lib/util/searchcursor.js',
-                    'src/thirdparty/CodeMirror2/addon/edit/closetag.js',
-                    'src/thirdparty/CodeMirror2/addon/selection/active-line.js',
+                    'src/thirdparty/CodeMirror/lib/codemirror.js',
+                    'src/thirdparty/CodeMirror/lib/util/dialog.js',
+                    'src/thirdparty/CodeMirror/lib/util/searchcursor.js',
+                    'src/thirdparty/CodeMirror/addon/edit/closetag.js',
+                    'src/thirdparty/CodeMirror/addon/selection/active-line.js',
                     'src/thirdparty/mustache/mustache.js',
                     'src/thirdparty/path-utils/path-utils.min',
-                    'src/thirdparty/less-1.7.5.min.js'
+                    'src/thirdparty/less-2.5.1.min.js'
                 ],
                 helpers : [
                     'test/spec/PhantomHelper.js'
@@ -299,11 +300,6 @@ module.exports = function (grunt) {
             projectRoot: 'src/extensibility/node/spec/'
         },
         jshint: {
-            all: [
-                '<%= meta.grunt %>',
-                '<%= meta.src %>',
-                '<%= meta.test %>'
-            ],
             grunt:  '<%= meta.grunt %>',
             src:    '<%= meta.src %>',
             test:   '<%= meta.test %>',
@@ -324,8 +320,8 @@ module.exports = function (grunt) {
     grunt.registerTask('install', ['write-config', 'less']);
 
     // task: test
-    grunt.registerTask('test', ['jshint:all', 'jasmine']);
-//    grunt.registerTask('test', ['jshint:all', 'jasmine', 'jasmine_node']);
+    grunt.registerTask('test', ['jshint', 'jasmine', 'nls-check']);
+//    grunt.registerTask('test', ['jshint', 'jasmine', 'jasmine_node']);
 
     // task: set-release
     // Update version number in package.json and rewrite src/config.json
